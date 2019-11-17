@@ -58,7 +58,10 @@ public class UI {
 		System.out.println("Turno: " + chessMatch.getTurn());
 		String colorPlayer;
 		if (chessMatch.getCurrentPlayer() == Color.WHITE) colorPlayer = "BRANCO"; else colorPlayer = "PRETO";
-		System.out.println("Aguardando Jogador: " + colorPlayer); 
+		System.out.println("Aguardando Jogador: " + colorPlayer);
+		if (chessMatch.getCheck()) {
+			System.out.println("XEQUE!");
+		}
 		//chessMatch.getCurrentPlayer());
 	}
 
