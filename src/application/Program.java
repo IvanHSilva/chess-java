@@ -41,6 +41,12 @@ public class Program {
 				captured.add(capturedPiece);
 			}
 			
+			if (chessMatch.getPromoted() != null) {
+				System.out.print("Digite a peca escolhida para promocao (B/N/R/Q): ");
+				String type = sc.nextLine();
+				chessMatch.replacePromotedPiece(type);
+			}
+			
 			} catch (ChessException e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
@@ -51,9 +57,5 @@ public class Program {
 		}
 		UI.clearScreen();
 		UI.printMatch(chessMatch, captured);
-		
-		//sc.close();
-				
 	}
-
 }
